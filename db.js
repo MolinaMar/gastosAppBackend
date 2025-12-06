@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI =
-  process.env.MONGO_URI ||
-  process.env.MONGODB_URL ||
-  'mongodb://mongo:rxRcvNBKAuYrnltEtALpONsgPuGrqdBb@crossover.proxy.rlwy.net:21591';
+const MONGO_URI = 'mongodb://mongo:rxRcvNBKAuYrnltEtALpONsgPuGrqdBb@crossover.proxy.rlwy.net:21591';
 
 async function connectDB() {
   try {
