@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/gastosappdb';
+const MONGO_URI =
+  process.env.MONGO_URI ||
+  process.env.MONGODB_URL ||
+  'mongodb://127.0.0.1:27017/gastosappdb';
 
 async function connectDB() {
   try {
@@ -13,4 +16,3 @@ async function connectDB() {
 }
 
 module.exports = { connectDB, mongoose };
-
